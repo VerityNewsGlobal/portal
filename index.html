@@ -6,7 +6,7 @@
     <title>Verity News | Inteligencia Global y Verificación</title>
     <meta name="description" content="Información de élite, filtrada y verificada. El estándar global en noticias de alto impacto.">
     
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&family=Inter:wght@300;400;600&family=Playfair+Display:italic,wght@700&display=swap" rel="stylesheet">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -16,13 +16,14 @@
                     colors: {
                         brand: {
                             emerald: '#10B981',
-                            dark: '#111827',
-                            silver: '#6B7280',
-                            cream: '#F9FAFB'
+                            dark: '#0F172A',
+                            silver: '#64748B',
+                            cream: '#F8FAFC'
                         }
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
+                        display: ['Archivo', 'sans-serif'],
                         serif: ['Playfair Display', 'serif'],
                     }
                 }
@@ -31,123 +32,164 @@
     </script>
 
     <style>
-        .news-gradient {
-            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(17,24,39,0.9) 100%);
+        /* Capa de legibilidad profunda para el Hero */
+        .news-overlay {
+            background: linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(15,23,42,0.7) 40%, rgba(15,23,42,0.95) 100%);
         }
         .glass-effect {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(12px);
         }
+        /* Suavizado de fuentes para Mac/Windows */
+        body { -webkit-font-smoothing: antialiased; }
     </style>
 </head>
 
-<body class="bg-brand-cream text-brand-dark font-sans leading-relaxed">
+<body class="bg-brand-cream text-brand-dark font-sans leading-normal">
 
-    <header class="sticky top-0 z-50 glass-effect border-b border-gray-200">
+    <header class="sticky top-0 z-50 glass-effect border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0 flex items-center">
-                    <span class="font-serif text-2xl font-black tracking-tighter uppercase italic border-b-2 border-brand-emerald">
+                    <span class="font-serif text-2xl font-bold tracking-tighter uppercase italic border-b-2 border-brand-emerald">
                         Verity <span class="text-brand-emerald">News</span>
                     </span>
                 </div>
                 
-                <nav class="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-widest text-brand-silver">
+                <nav class="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-[0.2em] text-brand-silver">
                     <a href="#" class="hover:text-brand-emerald transition">Geopolítica</a>
                     <a href="#" class="hover:text-brand-emerald transition">Mercados</a>
                     <a href="#" class="hover:text-brand-emerald transition">Tecnología</a>
-                    <a href="#" class="hover:text-brand-emerald transition">Análisis</a>
                 </nav>
 
-                <div class="flex items-center space-x-2">
+                <div class="flex items-center space-x-2 bg-slate-100 px-3 py-1 rounded-full border border-slate-200">
                     <span class="relative flex h-2 w-2">
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-emerald opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-emerald"></span>
                     </span>
-                    <span class="text-[10px] font-bold uppercase tracking-tighter text-brand-dark">Centinela Activo</span>
+                    <span class="text-[9px] font-black uppercase tracking-widest text-slate-600">Centinela Activo</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         
-        <section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12">
-            <div class="lg:col-span-8 relative rounded-lg overflow-hidden group shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200" alt="Noticia Principal" class="w-full h-[500px] object-cover group-hover:scale-105 transition duration-700">
-                <div class="absolute inset-0 news-gradient flex flex-col justify-end p-8 text-white">
-                    <span class="bg-brand-emerald text-white text-[10px] font-bold px-3 py-1 rounded-full w-fit mb-4 uppercase tracking-widest">Global Impact</span>
-                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-black leading-none mb-4">
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+            <div class="lg:col-span-8 relative rounded-2xl overflow-hidden shadow-2xl group border border-slate-200">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1400" alt="Noticia Principal" class="w-full h-[550px] object-cover group-hover:scale-[1.02] transition duration-1000">
+                
+                <div class="absolute inset-0 news-overlay flex flex-col justify-end p-6 md:p-12 text-white">
+                    <div class="mb-4">
+                        <span class="bg-brand-emerald text-white text-[10px] font-black px-4 py-1.5 rounded-sm uppercase tracking-[0.2em]">
+                            Global Strategic Alert
+                        </span>
+                    </div>
+                    
+                    <h1 class="font-display text-4xl md:text-5xl lg:text-7xl font-black leading-[0.95] mb-6 tracking-tighter drop-shadow-lg uppercase">
                         La IA Reconfigura el Mercado de Valores de 2026.
                     </h1>
-                    <p class="text-gray-300 max-w-xl text-sm md:text-base mb-6 font-light">
-                        El Centinela ha detectado movimientos inusuales en las bolsas europeas tras la implementación de nuevos protocolos algorítmicos.
+                    
+                    <p class="text-slate-200 max-w-2xl text-sm md:text-lg mb-8 font-light leading-relaxed">
+                        Análisis profundo sobre la integración masiva de algoritmos cuánticos en las bolsas de Londres y Nueva York. El Centinela reporta una ventaja del 40% en tiempos de ejecución.
                     </p>
-                    <div class="flex items-center space-x-4 text-[10px] font-bold uppercase tracking-widest">
-                        <span>2 MIN DE LECTURA</span>
-                        <span class="text-brand-emerald">•</span>
-                        <span>ACTUALIZADO HACE 5M</span>
+                    
+                    <div class="flex items-center space-x-6 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                        <span class="flex items-center"><svg class="w-3 h-3 mr-2 text-brand-emerald" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> 3 MIN LECTURA</span>
+                        <span>•</span>
+                        <span>ACTUALIZACIÓN 16:30 GMT</span>
                     </div>
                 </div>
             </div>
 
-            <aside class="lg:col-span-4 space-y-6">
-                <div class="bg-white p-6 border border-gray-200 rounded-lg shadow-sm">
-                    <h3 class="font-serif text-xl font-bold mb-4 border-b border-brand-emerald pb-2 italic">Resumen Ejecutivo</h3>
-                    <ul class="space-y-4">
-                        <li class="flex items-start space-x-3">
-                            <span class="text-brand-emerald text-lg">01</span>
-                            <p class="text-xs text-brand-silver leading-relaxed"><strong class="text-brand-dark">Verificación:</strong> Confirmado por 3 fuentes institucionales.</p>
+            <aside class="lg:col-span-4 space-y-8">
+                <div class="bg-white p-8 border border-slate-200 rounded-2xl shadow-sm relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-2 bg-slate-50 border-b border-l border-slate-200 text-[9px] font-bold text-slate-400 uppercase">GEO Block v1.0</div>
+                    <h3 class="font-display text-2xl font-black mb-6 uppercase tracking-tighter italic border-b-4 border-brand-emerald w-fit">Síntesis Ejecutiva</h3>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <span class="bg-brand-emerald/10 text-brand-emerald font-black text-xs px-2 py-1 rounded mr-4">01</span>
+                            <div>
+                                <h4 class="text-[10px] font-black uppercase text-brand-silver mb-1 tracking-widest">Verificación</h4>
+                                <p class="text-sm text-slate-700 leading-snug font-medium italic">"Validado por Reuters y Bloomberg Terminal."</p>
+                            </div>
                         </li>
-                        <li class="flex items-start space-x-3">
-                            <span class="text-brand-emerald text-lg">02</span>
-                            <p class="text-xs text-brand-silver leading-relaxed"><strong class="text-brand-dark">Impacto:</strong> Riesgo sistémico en sector bancario moderado.</p>
+                        <li class="flex items-start">
+                            <span class="bg-brand-emerald/10 text-brand-emerald font-black text-xs px-2 py-1 rounded mr-4">02</span>
+                            <div>
+                                <h4 class="text-[10px] font-black uppercase text-brand-silver mb-1 tracking-widest">Punto Crítico</h4>
+                                <p class="text-sm text-slate-700 leading-snug">Riesgo sistémico moderado en la banca comercial.</p>
+                            </div>
                         </li>
-                        <li class="flex items-start space-x-3">
-                            <span class="text-brand-emerald text-lg">03</span>
-                            <p class="text-xs text-brand-silver leading-relaxed"><strong class="text-brand-dark">Proyección:</strong> Estabilidad prevista para el cierre del Q2.</p>
+                        <li class="flex items-start">
+                            <span class="bg-brand-emerald/10 text-brand-emerald font-black text-xs px-2 py-1 rounded mr-4">03</span>
+                            <div>
+                                <h4 class="text-[10px] font-black uppercase text-brand-silver mb-1 tracking-widest">Proyección</h4>
+                                <p class="text-sm text-slate-700 leading-snug">Alta volatilidad prevista para el cierre del trimestre.</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
 
-                <div class="bg-brand-dark text-white p-6 rounded-lg">
-                    <p class="text-[10px] uppercase tracking-widest text-brand-silver mb-2">Market Sentiment</p>
+                <div class="bg-brand-dark text-white p-8 rounded-2xl border border-slate-800 shadow-xl">
+                    <div class="flex justify-between items-center mb-6">
+                        <p class="text-[10px] font-black uppercase tracking-[0.2em] text-brand-silver">Market Sentiment</p>
+                        <span class="text-brand-emerald text-[10px] font-bold">LIVE DATA</span>
+                    </div>
                     <div class="flex justify-between items-end">
-                        <span class="text-3xl font-serif italic text-brand-emerald">Neutral+</span>
-                        <div class="flex space-x-1 h-8 items-end">
-                            <div class="w-1 bg-brand-emerald h-4"></div>
-                            <div class="w-1 bg-brand-emerald h-6"></div>
-                            <div class="w-1 bg-brand-emerald h-8"></div>
-                            <div class="w-1 bg-gray-600 h-5"></div>
+                        <div>
+                            <span class="text-4xl font-display font-black italic tracking-tighter">Bullish+</span>
+                            <p class="text-[10px] text-slate-500 mt-1 uppercase">Tendencia Algorítmica</p>
+                        </div>
+                        <div class="flex space-x-1.5 h-12 items-end">
+                            <div class="w-1.5 bg-brand-emerald h-1/4 rounded-full"></div>
+                            <div class="w-1.5 bg-brand-emerald h-1/2 rounded-full"></div>
+                            <div class="w-1.5 bg-brand-emerald h-3/4 rounded-full animate-pulse"></div>
+                            <div class="w-1.5 bg-brand-emerald h-full rounded-full"></div>
                         </div>
                     </div>
                 </div>
             </aside>
         </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <article class="group">
-                <div class="overflow-hidden rounded-lg mb-4">
-                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=600" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+        <div class="flex items-center space-x-4 mb-8">
+            <h2 class="font-display text-2xl font-black uppercase tracking-tighter italic">Últimas Investigaciones</h2>
+            <div class="flex-grow h-[1px] bg-slate-200"></div>
+        </div>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <article class="group cursor-pointer">
+                <div class="relative overflow-hidden rounded-xl mb-5 border border-slate-200 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800" class="w-full h-56 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute top-4 left-4">
+                        <span class="bg-brand-dark/80 backdrop-blur-md text-white text-[9px] font-bold px-3 py-1 rounded-sm uppercase">Ciberseguridad</span>
+                    </div>
                 </div>
-                <span class="text-brand-emerald text-[10px] font-bold uppercase tracking-widest">Ciberseguridad</span>
-                <h2 class="font-serif text-xl font-bold mt-2 leading-tight hover:text-brand-emerald transition pointer-events-auto cursor-pointer">
+                <h2 class="font-display text-xl font-black leading-tight group-hover:text-brand-emerald transition mb-3 uppercase tracking-tighter">
                     Protocolos Post-Cuánticos: La nueva muralla digital.
                 </h2>
-                <p class="text-xs text-brand-silver mt-3 line-clamp-2">
-                    Las agencias de inteligencia globales aceleran la transición hacia el cifrado resistente a computación cuántica.
+                <p class="text-xs text-slate-500 leading-relaxed line-clamp-2">
+                    Las agencias de inteligencia globales aceleran la transición hacia el cifrado resistente a la computación cuántica ante nuevas amenazas.
                 </p>
             </article>
-
-            </section>
+        </section>
 
     </main>
 
-    <footer class="bg-white border-t border-gray-200 mt-20 py-12">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-brand-silver">
-                &copy; 2026 Verity News Agency | Powered by Centinela IA
+    <footer class="bg-white border-t border-slate-200 mt-24 py-16">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
+            <div class="font-serif text-xl font-bold italic tracking-tighter">
+                Verity <span class="text-brand-emerald">News</span>
+            </div>
+            <p class="text-[10px] font-black uppercase tracking-[0.4em] text-brand-silver">
+                &copy; 2026 Verity News Agency | Sintonía con la Verdad
             </p>
+            <div class="flex space-x-6 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                <a href="#" class="hover:text-brand-emerald">Terminal</a>
+                <a href="#" class="hover:text-brand-emerald">API</a>
+                <a href="#" class="hover:text-brand-emerald">Privacidad</a>
+            </div>
         </div>
     </footer>
 
